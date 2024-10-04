@@ -1,136 +1,227 @@
-/* Định nghĩa cho chế độ Light Mode */
-body.light-mode {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-body.light-mode .hero-text h1, 
-body.light-mode .hero-text p {
-    color: #333;
-}
-
-/* Định nghĩa cho chế độ Dark Mode */
-body.dark-mode {
-    background-color: #333;
-    color: #f4f4f4;
-}
-
-body.dark-mode .hero-text h1, 
-body.dark-mode .hero-text p {
-    color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.section-hero {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.section-hero h1 {
-    font-size: 3rem;
-}
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.light-mode .hero-text h1,
+body.light-mode .hero-text p {
+    color: #333;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+body.dark-mode .hero-text h1,
+body.dark-mode .hero-text p {
+    color: #f4f4f4;
+}
+
+/* Header Styles */
 header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
     background-color: #333;
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 20px;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: inherit;
     font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
 .section-hero {
-    background: url('background-image.jpg') no-repeat center center/cover;
-    height: 80vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    height: 80vh;
+    background: url('background-image.jpg') no-repeat center center/cover;
     color: #fff;
+    text-align: center;
 }
 
 .section-hero h1 {
     font-size: 3rem;
 }
 
+/* Section Container */
 .section-container {
-    padding: 2rem 5%;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .section-container h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    text-align: center;
 }
 
+/* Research Grid Styles */
 .research-grid {
     display: flex;
     justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .research-item {
-    width: 30%;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.research-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.research-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.research-item p {
+    font-size: 1rem;
+}
+
+/* Contact Section */
+#contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
-    padding: 1rem 0;
     text-align: center;
-    margin-top: 2rem;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Social Media and Dark Mode Toggle Icons */
+.top-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.social-icon {
+    width: 25px;
+    cursor: pointer;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.theme-toggle-btn img {
+    width: 30px;
+}
+
+/* Icon Container for Dark Mode Toggle and Social Links */
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-container a {
+    font-size: 1.5em;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.icon-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-container a:hover,
+.icon-container button:hover {
+    color: #007bff;
+}
+
+.icon-container button i {
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .icon-container button i {
+    color: #ffdd57;
+}
+
+body.light-mode .icon-container button i {
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .top-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .research-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .research-item {
+        width: 90%;
+    }
+
+    .section-hero h1 {
+        font-size: 2.5rem;
+    }
 }
