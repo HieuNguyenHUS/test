@@ -1,3 +1,59 @@
+/* Định nghĩa cho chế độ Light Mode */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.light-mode .hero-text h1, 
+body.light-mode .hero-text p {
+    color: #333;
+}
+
+/* Định nghĩa cho chế độ Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body.dark-mode .hero-text h1, 
+body.dark-mode .hero-text p {
+    color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.section-hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-hero h1 {
+    font-size: 3rem;
+}
 * {
     margin: 0;
     padding: 0;
